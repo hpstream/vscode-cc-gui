@@ -13,6 +13,24 @@ export interface ChangelogEntry {
 
 export const CHANGELOG_DATA: ChangelogEntry[] = [
   {
+    version: '0.1.3',
+    date: '2026-08-12',
+    content: {
+      en: `- Bump version to 0.1.3
+- Wire task completion notification setting and show an in-panel toast when a turn finishes
+- Make Stop kill Grok/Kimi/OpenCode/Pi CLI children; suppress toast/sound after user abort
+- Treat Codex Aborted as a quiet interrupt instead of a chat ERROR bubble
+- Fix intermittent leftover chat after "new session" (cancel deferred updateMessages, hard clear, remount list)
+- Open new chat panels as stacked editor tabs in the same group instead of side-by-side splits`,
+      zh: `- 版本升级到 0.1.3
+- 打通任务完成通知设置：回合结束时显示面板内 toast
+- Stop 可可靠终止 Grok/Kimi/OpenCode/Pi 子进程；用户主动中止后抑制完成 toast/音效
+- Codex 中断按安静处理，不再弹出 ERROR 气泡
+- 修复偶现「新会话仍显示旧对话」（取消延迟消息回写、强制清空、重挂载列表）
+- 新页签改为同一编辑器组叠开，不再左右分屏`,
+    },
+  },
+  {
     version: '0.1.2',
     date: '2026-08-11',
     content: {
